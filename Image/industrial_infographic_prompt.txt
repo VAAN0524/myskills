@@ -1,0 +1,23 @@
+Professional industrial technical infographic titled '水分对工业生产的影响' displayed at the top center in bold white modern sans-serif font. Overall adopts cinematic deep blue tech-style background with smooth gradient transitioning from light blue at top-left corner to deep navy blue at bottom-right corner, creating precise calm industrial atmosphere with uniform soft lighting.
+
+The layout features clear visual hierarchy dividing canvas into left and right panels separated by a thin glowing cyan line. Left panel occupies 40% of canvas width. Left panel title '实际发生的现象' displayed inside a prominent light blue rounded rectangular header box with soft glowing edges, centered at the top of left panel, using bold white modern font. Below the title, three deep navy blue rounded rectangular button-style items arranged vertically with equal spacing, each item featuring:
+
+Item 1: A detailed icon showing a small pile of brown powder-like granular material with a single water droplet suspended above creating a ripple effect, accompanied by Chinese text '团聚/结块' in clear white font on the left side, with a vibrant green checkmark symbol on the right side featuring soft glowing effect
+
+Item 2: A detailed icon showing a transparent conical laboratory flask filled with blue liquid containing multiple rising bubbles of varying sizes, accompanied by Chinese text '产生气泡/缺陷' in clear white font on the left side, with a vibrant green checkmark symbol on the right side featuring soft glowing effect
+
+Item 3: A detailed icon showing two interlocking metal gears with visible rust corrosion and orange-brown discoloration, accompanied by Chinese text '设备腐蚀/催化剂失活' in clear white font on the left side, with a vibrant green checkmark symbol on the right side featuring soft glowing effect
+
+Right panel occupies 60% of canvas width. Right panel title '【不会】发生的现象' displayed inside a prominent beige rounded rectangular header box with soft warm glow, centered at the top of right panel, using bold dark slate gray modern font. Below the title, four items arranged in a 2x2 grid format, each displayed inside a dark charcoal gray rectangular background box with slightly lighter border, each item featuring:
+
+Item 1: A detailed icon showing precisely interlocking clean metal gears with shiny silver surfaces, accompanied by Chinese text '反应效率【显著提高】' in clear white font, with a large bright red X mark covering the center featuring bold thick lines and slight glow effect
+
+Item 2: A detailed icon showing a neatly arranged bundle of silver metal cylindrical pipes with clean polished surfaces, accompanied by Chinese text '成品内部【绝对无气泡/孔隙】' in clear white font, with a large bright red X mark covering the center featuring bold thick lines and slight glow effect
+
+Item 3: A detailed icon showing a sturdy metal chain under tension with visible strain, each link detailed with metallic shine, accompanied by Chinese text '材料强度与耐久性【得到增强】' in clear white font, with a large bright red X mark covering the center featuring bold thick lines and slight glow effect
+
+Item 4: A detailed icon showing a corroded metal wrench with orange-brown rust patches and surface degradation, accompanied by Chinese text '加工过程【零腐蚀/零副反应风险】' in clear white font, with a large bright red X mark covering the center featuring bold thick lines and slight glow effect
+
+At the bottom center of canvas, a small white text note displayed in a semi-transparent dark blue rounded rectangular background for better readability: '注：水分的存在通常会导致负面或干扰性的结果，而非理想或增强的状态' using regular weight white sans-serif font.
+
+Overall style is modern minimalist industrial design with strong color contrast between deep navy blues, light blues, beiges, dark grays, vibrant greens, and bright reds. All graphical symbols are rendered with photographic realism showing metallic textures, glass transparency, liquid properties, and surface materials. The entire canvas is frame-filling with no empty negative space, all visual elements are precisely positioned with balanced composition, fully utilized canvas with rich visual content presenting publication-quality technical illustration. Resolution 2048x1152 pixels with sharp detail and professional color grading.
