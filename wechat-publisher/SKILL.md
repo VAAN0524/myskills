@@ -14,11 +14,16 @@ license: MIT
 
 ```bash
 # ~/.wechat-publisher/.env
-WECHAT_APP_ID=wx509d9d31eaeeccb9
-WECHAT_APP_SECRET=3fe1d927d7cb9f173a18d15fa0cb6646
+WECHAT_APP_ID=your_wechat_app_id_here
+WECHAT_APP_SECRET=your_wechat_app_secret_here
 ```
 
-**IP白名单已设置，可直接使用API发布**
+**⚠️ 请将你的微信凭证配置到本地环境变量中，不要提交到 Git**
+
+**获取方式：**
+1. 访问 https://developers.weixin.qq.com/platform/
+2. 我的业务 → 公众号 → 开发密钥
+3. 创建密钥，添加 IP 白名单
 
 ---
 
@@ -679,9 +684,9 @@ AI的触角已经伸到医疗、教育、金融等多个领域。其中医疗诊
 
 ```bash
 # ~/.wechat-publisher/.env
-WECHAT_APP_ID=your_app_id
-WECHAT_APP_SECRET=your_app_secret
-ZHIPU_API_KEY=your_zhipu_key  # 可选，用于搜索
+WECHAT_APP_ID=your_wechat_app_id
+WECHAT_APP_SECRET=your_wechat_app_secret
+ZHIPU_API_KEY=your_zhipu_api_key  # 可选，用于搜索
 ```
 
 **获取凭证：**

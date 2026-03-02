@@ -14,11 +14,11 @@ license: MIT
 
 ```bash
 # ~/.image-skill/.env
-MODELSCOPE_API_KEY=ms-273f770d-9fa1-435e-862a-0cecc804d424
+MODELSCOPE_API_KEY=your_modelscope_api_key_here
 DEFAULT_PROVIDER=modelscope
 ```
 
-**ModelScope Qwen-Image-2512 已配置，可直接生成图片**
+**⚠️ 请将你的 API Key 配置到本地环境变量中，不要提交到 Git**
 
 > **参考项目**：[JimLiu/baoyu-skills](https://github.com/JimLiu/baoyu-skills)
 
