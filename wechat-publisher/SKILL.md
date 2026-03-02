@@ -10,17 +10,28 @@ license: MIT
 
 > **⚡ 全自动模式：用户只需提供主题，系统自动完成所有步骤直到上传草稿箱，无需中途确认**
 
-## 内置配置（已配置完成）
+## 自动配置加载
+
+**优先级：** `.env.local`（本地真实凭证）→ `.env`（示例配置）
 
 ```bash
-# ~/.wechat-publisher/.env
-WECHAT_APP_ID=your_wechat_app_id_here
-WECHAT_APP_SECRET=your_wechat_app_secret_here
+# 技能会自动按以下顺序查找配置：
+# 1. 当前目录的 .env.local（包含真实凭证，优先使用）
+# 2. 当前目录的 .env（示例配置）
+# 3. 环境变量
 ```
 
-**⚠️ 请将你的微信凭证配置到本地环境变量中，不要提交到 Git**
+**文件说明：**
+- `.env.local` - 本地配置（包含真实凭证，已在 .gitignore 中，不会提交到 Git）
+- `.env` - 示例配置（提交到 Git，供他人参考）
 
-**获取方式：**
+**首次使用：**
+```bash
+# .env.local 已创建并包含真实凭证，可直接使用
+# IP 白名单已设置，可直接使用 API 发布
+```
+
+**获取微信凭证（供新用户参考）：**
 1. 访问 https://developers.weixin.qq.com/platform/
 2. 我的业务 → 公众号 → 开发密钥
 3. 创建密钥，添加 IP 白名单

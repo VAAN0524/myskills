@@ -2,7 +2,7 @@
 
 个人收集的 Claude Code Skills。
 
-> **⚠️ 安全提示：所有敏感信息已移除，请使用本地配置文件**
+> **⚠️ 自动配置：.env.local 包含真实凭证，自动加载，不会提交到 Git**
 
 ## Skills 列表
 
@@ -16,11 +16,7 @@
 - AI 生成封面图和章节配图
 - 自动上传到微信草稿箱
 
-**配置方式：**
-```bash
-cp wechat-publisher/.env.example wechat-publisher/.env
-# 编辑 .env 文件，填入你的微信凭证
-```
+**状态：** ✅ 已配置（.env.local 包含真实凭证）
 
 ### Image
 
@@ -43,67 +39,78 @@ AI 图像生成 skill，支持多种专业场景。
 - 智谱 AI CogView
 - 阿里云通义万相
 
-**配置方式：**
-```bash
-cp Image/.env.example Image/.env
-# 编辑 .env 文件，填入你的 API Key
+**状态：** ✅ 已配置（.env.local 包含真实凭证）
+
+## 自动配置系统
+
+### 工作原理
+
+```
+┌─────────────────────────────────────────────┐
+│           Skill 自动加载配置                   │
+├─────────────────────────────────────────────┤
+│ 优先级 1: .env.local（真实凭证，优先）        │
+│ 优先级 2: .env（示例配置）                   │
+│ 优先级 3: 环境变量                         │
+└─────────────────────────────────────────────┘
 ```
 
-## 安全配置
+### 文件说明
 
-### 敏感信息保护
+| 文件 | 状态 | 说明 |
+|------|------|------|
+| `.env.local` | ✅ 已创建 | 包含真实凭证，已在 .gitignore 中保护 |
+| `.env` | ✅ 示例文件 | 提交到 Git，供他人参考 |
+| `.env.example` | ✅ 示例文件 | 提交到 Git，配置模板 |
 
-所有 skills 均使用本地配置文件存放敏感信息，**不要提交到 Git**。
+### 安全保护
 
-### 配置步骤
-
-1. 复制示例配置文件：
+**.gitignore 已配置：**
 ```bash
-cp Image/.env.example Image/.env
-cp wechat-publisher/.env.example wechat-publisher/.env
+.env
+*.env
+.env.local        # ← 保护本地配置
+.env.*.local
+*_KEY
+*_SECRET
 ```
 
-2. 编辑配置文件，填入你的实际凭证
-
-3. 验证 `.gitignore` 已包含敏感文件：
+**Git 状态检查：**
 ```bash
-cat .gitignore
-# 应包含：.env, *.secret, *_KEY, *_SECRET
+# 查看哪些文件会被提交
+git status
+
+# .env.local 应该显示为 "被忽略"
+# .env 和 .env.example 会正常显示
 ```
-
-### 获取 API 凭证
-
-#### 微信公众号
-1. 访问 https://developers.weixin.qq.com/platform/
-2. 我的业务 → 公众号 → 开发密钥
-3. 创建密钥，添加服务器 IP 到白名单
-
-#### ModelScope
-1. 访问 https://modelscope.cn/
-2. 个人中心 → 访问凭证
-3. 创建 API Key
-
-#### 智谱 AI
-1. 访问 https://open.bigmodel.cn/
-2. API 密钥 → 创建新的 API Key
 
 ## 安装方式
 
-将 skill 文件夹复制到 `~/.claude/skills/` 目录下即可。
+### 方法 1：直接复制（推荐）
 
 ```bash
+# 复制到 Claude Code skills 目录
 cp -r wechat-publisher ~/.claude/skills/
 cp -r Image ~/.claude/skills/
+
+# 配置已完成，.env.local 自动包含真实凭证
+```
+
+### 方法 2：其他用户首次使用
+
+```bash
+# 1. 复制 skills
+cp -r wechat-publisher ~/.claude/skills/
+cp -r Image ~/.claude/skills/
+
+# 2. 创建本地配置
+cp ~/.claude/skills/Image/.env.example ~/.claude/skills/Image/.env.local
+cp ~/.claude/skills/wechat-publisher/.env.example ~/.claude/skills/wechat-publisher/.env.local
+
+# 3. 编辑 .env.local，填入你的真实凭证
+notepad ~/.claude/skills/Image/.env.local
 ```
 
 ## License
 
 MIT
-
----
-
-**安全提醒：**
-- ✅ 已创建 `.gitignore` 保护敏感文件
-- ✅ 所有 SKILL.md 中的密钥已替换为占位符
-- ✅ 提供了 `.env.example` 示例配置文件
-- ❌ 请勿将包含真实凭证的 `.env` 文件提交到 Git

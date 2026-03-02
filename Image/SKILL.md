@@ -10,15 +10,26 @@ license: MIT
 
 > **⚡ 全自动模式：配合 wechat-publisher 使用时，自动生成所有配图，无需用户干预**
 
-## 内置配置（已配置完成）
+## 自动配置加载
+
+**优先级：** `.env.local`（本地真实凭证）→ `.env`（示例配置）
 
 ```bash
-# ~/.image-skill/.env
-MODELSCOPE_API_KEY=your_modelscope_api_key_here
-DEFAULT_PROVIDER=modelscope
+# 技能会自动按以下顺序查找配置：
+# 1. 当前目录的 .env.local（包含真实凭证，优先使用）
+# 2. 当前目录的 .env（示例配置）
+# 3. 环境变量
 ```
 
-**⚠️ 请将你的 API Key 配置到本地环境变量中，不要提交到 Git**
+**文件说明：**
+- `.env.local` - 本地配置（包含真实凭证，已在 .gitignore 中，不会提交到 Git）
+- `.env` - 示例配置（提交到 Git，供他人参考）
+
+**首次使用：**
+```bash
+# .env.local 已创建并包含真实凭证，可直接使用
+# 如需修改，编辑 Image/.env.local 文件
+```
 
 > **参考项目**：[JimLiu/baoyu-skills](https://github.com/JimLiu/baoyu-skills)
 
